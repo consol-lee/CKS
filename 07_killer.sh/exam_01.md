@@ -9,7 +9,7 @@
 2. Schedule Pod on Master Node
 - Create a single Pod of image httpd:2.4.41-alpine in Namespace default. The Pod should be named pod1 and the container should be named pod1-container. This Pod should only be scheduled on a master node, do not add new labels any nodes.
   - $ kubectl run pod1 --image=httpd:2.4.41-alpine --dry-run=client -o yaml
----
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -30,12 +30,13 @@ spec:
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
----
+```
+
 - Shortly write the reason on why Pods are by default not scheduled on master nodes into /opt/course/2/master_schedule_reason .
   - $ kubectl describe pod pod1
     - master nodes usually have a taint defined
 
-3. Scale down StatefulSet
+1. Scale down StatefulSet
 - There are two Pods named o3db-* in Namespace project-c13. C13 management asked you to scale the Pods down to one replica to save resources. Record the action.
   - $ kubectl -n project-c13 scale sts o3db --replicas 1 --record
 
