@@ -1,7 +1,7 @@
 # Certified Kubernetes Security Specialist
 
 - [Udemy](https://www.udemy.com/course/certified-kubernetes-security-specialist/)
-- Kubernetes v1.24
+- Kubernetes v1.26
 
 ## Cluster Setup 10%
 - Primarily involves the ability to configure network security policies that enforce pod access levels and restrictions.
